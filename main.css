@@ -1,0 +1,128 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    list-style: none;
+    font-size: 16px;
+    
+}
+body{
+    background: black;
+}
+header{
+    border-radius: 15px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #63123827;
+}
+.nome{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.resto{
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nome p{
+    font-size: 20px;
+}
+.nome input{
+    background-color: black;
+    border: 2px solid purple;
+    border-radius: 15px;
+    font-size: 20px;
+    height: 45px;
+    width: 900px;
+}
+
+.resto input{
+    text-align: center;
+    background-color: black;
+    border: 1px solid purple;
+    border-radius: 15px;
+    font-size: 16px;
+    height: 35px;
+    width: 35px;
+}
+
+.resto select{
+    text-align: center;
+    background-color: black;
+    border: 1px solid purple;
+    border-radius: 15px;
+    font-size: 16px;
+    height: 35px;
+    width: 200px;
+}
+
+section{
+    border-radius: 15px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #63123827;
+    height: 500px;
+}
+
+.hobbies h1{
+    font-size: 20px;
+}
+
+.hobbies form{
+    padding: 2%;
+    background-color: black;
+    border: 2px solid purple;
+    border-radius: 15px;
+    font-size: 20px;
+    width: 200px;
+}
+
+.tracospos h1{
+    font-size: 20px;
+}
+
+.tracospos form{
+    padding: 2%;
+    background-color: black;
+    border: 2px solid purple;
+    border-radius: 15px;
+    font-size: 20px;
+    width: 200px;
+}
+footer{
+    border-radius: 15px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #63123827;
+}
+footer button{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    align-items: center;
+    background-color: black;
+    border: 2px solid purple;
+    border-radius: 15px;
+    font-size: 20px;
+    height: 55px;
+    width: 150px;
+}
