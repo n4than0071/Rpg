@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    border-radius: 15px;
+    margin: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    background-color: #63123827;
+    width: 80%;
+}
+
+header a{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background-color: black;
+    border: 2px solid purple;
+    border-radius: 15px;
+    font-size: 16px;
+    color: white;
+    padding: 5px;
+    flex-grow: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header, section, footer {
+        width: 90%;
+    }
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hobbies, .tracospos, .tracosneg {
+        width: 100%;
+        text-align: center;
+    }
+}
