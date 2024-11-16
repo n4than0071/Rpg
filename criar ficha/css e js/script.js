@@ -1,7 +1,7 @@
 // Função para coletar as seleções e exibir na tela
 function obterSelecoes() {
     const nome = document.getElementById('nome').value;
-    const profissao = document.getElementById('profissao').value;
+    const profissao = document.getElementById('profissao').selectedOptions[0].textContent;
 
     // Coleta de seleções de hobbies
     const hobbies = [];
@@ -33,6 +33,7 @@ function obterSelecoes() {
 
 // Inicializa o total de pontos
 let total = 10;
+let valorProfissaoAnterior = 0;
 
 // Atualiza o total de pontos na tela
 function atualizarTotal() {
@@ -55,9 +56,12 @@ function processarAlteracao(event) {
 // Função para processar alterações no select de profissão
 function processarProfissao() {
     const selectProfissao = document.getElementById('profissao');
-    const valor = parseInt(selectProfissao.selectedOptions[0].getAttribute('data-valor'), 10) || 0;
-    
-    total += valor;  // Reseta para o valor da profissão, garantindo que o cálculo esteja correto
+    const valorAtual = parseInt(selectProfissao.selectedOptions[0].getAttribute('data-valor'), 10) || 0;
+
+    // Subtrai o valor anterior e adiciona o valor atual
+    total = total - valorProfissaoAnterior + valorAtual;
+    valorProfissaoAnterior = valorAtual; // Atualiza o valor anterior
+
     atualizarTotal();
 }
 
@@ -72,8 +76,56 @@ function inicializarEventos() {
     selectProfissao.addEventListener("change", processarProfissao);
 }
 
+//descrição das habilidades
+
+// Função para mostrar a descrição
+function mostrarDescricao(event) {
+    const descricaoDiv = document.getElementById("descricao");
+    let descricao = "";
+
+    if (event.target.tagName === 'SELECT') {
+        // Captura a descrição da profissão selecionada
+        descricao = event.target.selectedOptions[0].getAttribute("data-descricao");
+    } else if (event.target.tagName === 'INPUT') {
+        // Captura a descrição do checkbox
+        descricao = event.target.getAttribute("data-descricao");
+    }
+
+    // Exibe a div e ajusta o conteúdo
+    if (descricao) {
+        descricaoDiv.style.display = "block";
+        descricaoDiv.textContent = descricao;
+
+        // Posiciona a div próxima ao cursor do mouse
+        descricaoDiv.style.left = `${event.pageX + 10}px`;
+        descricaoDiv.style.top = `${event.pageY + 10}px`;
+    }
+}
+
+// Função para ocultar a descrição
+function esconderDescricao() {
+    const descricaoDiv = document.getElementById("descricao");
+    descricaoDiv.style.display = "none";
+}
+
+// Função para inicializar eventos nos checkboxes e no select de profissão
+function inicializarDescricoes() {
+    // Eventos para checkboxes
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("mouseover", mostrarDescricao);
+        checkbox.addEventListener("mouseout", esconderDescricao);
+    });
+
+    // Eventos para o select de profissão
+    const selectProfissao = document.getElementById("profissao");
+    selectProfissao.addEventListener("mouseover", mostrarDescricao);
+    selectProfissao.addEventListener("mouseout", esconderDescricao);
+}
+
 // Inicializa ao carregar a página
 window.onload = function () {
     atualizarTotal(); 
     inicializarEventos();
+    inicializarDescricoes();
 };
