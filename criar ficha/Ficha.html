@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha</title>
+    <link rel="stylesheet" href="css e js/main.css">
+    <script src="css e js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="nome">
+            <p>Nome:</p>
+            <input type="text" placeholder=" Meu nome é..." id="nome">
+        </div>
+
+        <div class="resto">
+            <p>Profissão:</p>
+            <select id="profissao" name="profissao">
+                <option>Minha Profissão é...</option>
+                <option value="p1" data-valor="8">Desempregado - +8</option>
+                <option value="p2" data-valor="0">Bombeiro - 0</option>
+                <option value="p3" data-valor="-4">Policial - -4</option>
+                <option value="p4" data-valor="-4">Guarda Florestal - -4</option>
+                <option value="p5" data-valor="-2">Construtor Civil - -2</option>
+                <option value="p6" data-valor="-2">Segurança - -2</option>
+                <option value="p7" data-valor="2">Carpinteiro - +2</option>
+                <option value="p8" data-valor="-6">Ladrão - -6</option>
+                <option value="p9" data-valor="-4">Chefe - -4</option>
+                <option value="p10" data-valor="-4">Assistente Técnico - -4</option>
+                <option value="p11" data-valor="2">Fazendeiro - +2</option>
+                <option value="p12" data-valor="-2">Pescador - -2</option>
+                <option value="p13" data-valor="2">Doutor - +2</option>
+                <option value="p14" data-valor="-8">Veterano - -8</option>
+                <option value="p15" data-valor="2">Enfermeiro - +2</option>
+                <option value="p16" data-valor="0">Lenhador - 0</option>
+                <option value="p17" data-valor="-6">Personal Trainer - -6</option>
+                <option value="p18" data-valor="2">Chapista - +2</option>
+                <option value="p19" data-valor="-4">Eletricista - -4</option>
+                <option value="p20" data-valor="-4">Engenheiro - -4</option>
+                <option value="p21" data-valor="-6">Metalúrgico - -6</option>
+                <option value="p22" data-valor="-6">Mecânico - -6</option>
+            </select>
+        </div>
+    </header>
+
+    <div id="Pontos">Pontos: 0</div>
+
+    <section class="container-sections">
+        <div class="hobbies">
+            <h1>Hobbies</h1>
+            <form id="formHobbies">
+                <label><input type="checkbox" name="hobbies" value="h1" data-valor="-5"> Mecânico Amador - -5</label><br>
+                <label><input type="checkbox" name="hobbies" value="h2" data-valor="-4"> Pescador - -4</label><br>
+                <label><input type="checkbox" name="hobbies" value="h3" data-valor="-4"> Jogador de Beisebol - -4</label><br>
+                <label><input type="checkbox" name="hobbies" value="h4" data-valor="-6"> Brigador - -6</label><br>
+                <label><input type="checkbox" name="hobbies" value="h5" data-valor="-6"> Cozinheiro - -6</label><br>
+                <label><input type="checkbox" name="hobbies" value="h6" data-valor="-4"> Socorrista - -4</label><br>
+                <label><input type="checkbox" name="hobbies" value="h7" data-valor="-6"> Escoteiro - -6</label><br>
+                <label><input type="checkbox" name="hobbies" value="h8" data-valor="-4"> Jardineiro - -4</label><br>
+                <label><input type="checkbox" name="hobbies" value="h9" data-valor="-5"> Ginasta - -5</label><br>
+                <label><input type="checkbox" name="hobbies" value="h10" data-valor="-8"> Habilidoso - -8</label><br>
+                <label><input type="checkbox" name="hobbies" value="h11" data-valor="-6"> Herbalista - -6</label><br>
+                <label><input type="checkbox" name="hobbies" value="h12" data-valor="-6"> Sobrevivencialista - -6</label><br>
+                <label><input type="checkbox" name="hobbies" value="h13" data-valor="-8"> Caçador - -8</label><br>
+                <label><input type="checkbox" name="hobbies" value="h14" data-valor="-4"> Nutricionista - -4</label><br>
+                <label><input type="checkbox" name="hobbies" value="h15" data-valor="-4"> Corredor - -4</label><br>
+                <label><input type="checkbox" name="hobbies" value="h16" data-valor="-4"> Costureiro - -4</label><br>
+            </form>
+        </div>
+        <div class="tracospos">
+            <h1>Traços Positivos</h1>
+            <form id="formPositivos">
+                <label><input type="checkbox" name="tracosPos" value="hs1" data-valor="-8"> Viciado em adrenalina - -8</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs2" data-valor="-10"> Atlético - -10</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs3" data-valor="-4"> Corajoso - -4</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs4" data-valor="-2"> Olhos de gato - -2</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs5" data-valor="-2"> Mãos ágeis - -2</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs6" data-valor="-6"> Visão aguçada - -6</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs7" data-valor="-6"> Saúde de ferro - -6</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs8" data-valor="-6"> Aprendiz rápido - -6</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs9" data-valor="-6"> Em forma - -6</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs10" data-valor="-4"> Gracioso - -4</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs11" data-valor="-4"> Discreto - -4</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs12" data-valor="-6"> Audição aguçada - -6</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs13" data-valor="-4"> Sortudo - -4</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs14" data-valor="-6"> Organizado - -6</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs15" data-valor="-2"> Andarilho - -2</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs16" data-valor="-1"> Bom de volante - -1</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs17" data-valor="-6"> Forte - -6</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs18" data-valor="-10"> Musculoso - -10</label><br>
+                <label><input type="checkbox" name="tracosPos" value="hs19" data-valor="-6"> Casca grossa - -6</label><br>
+            </form>
+        </div>
+        <div class="tracosneg">
+            <h1>Traços Negativos</h1>
+            <form id="formNegativos">
+                <label><input type="checkbox" name="tracosNeg" value="hn1" data-valor="2"> Desajeitado - +2</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn2" data-valor="5"> Asmático - +5</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn3" data-valor="4"> Estabanado - +4</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn4" data-valor="2"> Covarde - +2</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn5" data-valor="12"> Surdo - +12</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn6" data-valor="4"> Desorganizado - +4</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn7" data-valor="12"> Emaciado - +12</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn8" data-valor="6"> Franzino - +6</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn9" data-valor="2"> Ruim de audição - +2</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn10" data-valor="3"> Hemofóbico - +3</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn11" data-valor="6"> Despreparado - +6</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn12" data-valor="6"> Acima do peso - +6</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn13" data-valor="4"> Baixa imunidade - +4</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn14" data-valor="2"> Míope - +2</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn15" data-valor="4"> Fumante - +4</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn16" data-valor="6"> Saúde fraca - +6</label><br>  
+                <label><input type="checkbox" name="tracosNeg" value="hn17" data-valor="6"> Pele frágil - +6</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn18" data-valor="4"> Azarado - +4</label><br>
+                <label><input type="checkbox" name="tracosNeg" value="hn19" data-valor="10"> Fracote - +10</label><br>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <button type="button" onclick="obterSelecoes()">Salvar</button>
+    </footer>
+
+    <div id="log"></div>
+    
+</body>
+</html>
