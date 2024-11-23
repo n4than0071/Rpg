@@ -140,6 +140,19 @@ footer button:hover {
     background-color: purple;
     color: black;
 }
+footer a {
+    background-color: black;
+    border: 2px solid purple;
+    border-radius: 15px;
+    font-size: 20px;
+    height: 50px;
+    width: 150px;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 #log {
     text-align: center;
     font-size: 16px;

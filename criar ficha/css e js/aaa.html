@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troxa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            list-style: none;
+            text-decoration: none;
+        }
+        body {
+            background: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        body div {    
+            border-radius: 15px;
+            margin-top: 2%;
+            padding: 20px;
+            background-color: #63123827;
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .imagem { /* Aplica o estilo a todas as imagens */
+            display: none;
+            width: 200px; /* Tamanho da imagem */
+        }
+        button{
+            background-color: black;
+            border: 2px solid purple;
+            border-radius: 15px;
+            font-size: 20px;
+            height: 50px;
+            width: 150px;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+        button:hover {
+            background-color: purple;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão para exibir imagens e tocar áudio -->
+    <button onclick="mostrarImagensETocarAudio()">Clique aqui</button>
+
+    <!-- Imagens ocultas inicialmente -->
+    <img src="milkingdaddy_page11.jpg" class="imagem" alt="">
+    <img src="milkingdaddy_page12.jpg" class="imagem" alt="">
+    <img src="milkingdaddy_page15.jpg" class="imagem" alt="">
+    <img src="milkingdaddy_page16.jpg" class="imagem" alt="">
+    <img src="milkingdaddy_page17.jpg" class="imagem" alt="">
+
+    <!-- Áudio que será tocado -->
+    <audio id="audio" src="gemidão do zap - ESTOURADO (audio-extractor.net).mp3"></audio>
+
+    <script>
+        function mostrarImagensETocarAudio() {
+            // Exibe todas as imagens com a classe "imagem"
+            let imagens = document.querySelectorAll(".imagem");
+            imagens.forEach(imagem => {
+                imagem.style.display = "block";
+            });
+            
+            // Toca o áudio
+            let audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+</body>
+</html>
